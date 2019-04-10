@@ -49,7 +49,6 @@ class ActivityPresenter(
             val d = ar.observable
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe { act ->
-                        println("wiktor new act")
                         if (lifecycle.currentState == Lifecycle.State.RESUMED) {
                             presenter.present(act)
                             last = null
