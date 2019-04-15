@@ -26,7 +26,7 @@ import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fr_main.*
 import pl.org.seva.mvp.R
 import pl.org.seva.mvp.main.extension.inflate
-import pl.org.seva.mvp.presenter.ActivityPresenter
+import pl.org.seva.mvp.main.extension.observeActivityRecognition
 
 class MainFragment : Fragment() {
 
@@ -35,7 +35,7 @@ class MainFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        ActivityPresenter.build(this) {
+        observeActivityRecognition {
             presentDesc = { activity_desc.text = it }
             presentConf = { activity_conf.text = it.toString() }
         }
