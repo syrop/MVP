@@ -20,18 +20,12 @@
 package pl.org.seva.mvp.view
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fr_main.*
 import pl.org.seva.mvp.R
-import pl.org.seva.mvp.main.extension.inflate
 import pl.org.seva.mvp.main.extension.observeActivityRecognition
 
-class MainFragment : Fragment() {
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?) =
-            inflate(R.layout.fr_main, container)
+class MainFragment : Fragment(R.layout.fr_main) {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

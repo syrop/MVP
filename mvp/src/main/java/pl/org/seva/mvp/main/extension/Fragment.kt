@@ -19,13 +19,7 @@
 
 package pl.org.seva.mvp.main.extension
 
-import android.view.View
-import android.view.ViewGroup
-import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 
 inline fun <reified R : ViewModel> Fragment.provideViewModel() = activity!!.provideViewModel<R>()
-
-fun Fragment.inflate(@LayoutRes resource: Int, root: ViewGroup?): View =
-        layoutInflater.inflate(resource, root, false)

@@ -20,7 +20,6 @@
 package pl.org.seva.mvp
 
 import androidx.test.espresso.Espresso.onView
-import androidx.test.rule.ActivityTestRule
 import androidx.test.runner.AndroidJUnit4
 
 import org.junit.Test
@@ -31,6 +30,7 @@ import pl.org.seva.mvp.action.DelayAction
 import pl.org.seva.mvp.view.MainActivity
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
+import androidx.test.rule.ActivityTestRule
 import pl.org.seva.mvp.mock.MockActivityRecognitionObservable
 
 @RunWith(AndroidJUnit4::class)
